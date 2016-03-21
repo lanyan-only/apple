@@ -1,0 +1,1660 @@
+@font-face {
+	font-family:"Myriad Set Pro";
+	font-style:normal;
+	font-weight:100;
+	src:local("Myriad Set Pro"), 
+	url("../fonts/myriad-set-pro_thin.woff") format("woff");
+
+	/* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+article, aside, footer, header, nav, main, section, summary, 
+details, hgroup, figure, figcaption ,div{
+    display: block;
+    margin:0;
+    padding:0;
+}
+p {
+    margin-bottom: 8px;
+}
+p {
+    margin: 0 0 1em 0;
+}
+body{
+	font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif; 
+	margin:0;
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 400;
+    letter-spacing: normal;
+    background-color: #fff;
+    color: #333;
+    font-style: normal;
+}
+ul,li,h1,h2,h3,h4,h5,h6,p{
+	margin:0;
+	padding:0;
+	font-weight: normal;
+	list-style: none;
+}
+a{
+	color:black;
+	text-decoration: none;
+} 
+
+/* .clear{
+	clear:both;
+} */
+/* .container:after{
+	content:"";
+	clear:both;
+	display: block;
+} */
+
+nav{
+   text-align:justify;
+   background: rgba(0,0,0,0.8);
+   position: absolute;
+   z-index: 50;
+   width:100%;
+    height:48px;
+    transition: background 0.35s linear,height 0.35s ease-in;
+   /*  transition:height .2s ease; */
+    overflow: hidden;
+}
+.clearfix:after{
+	content:"";
+	display: block;
+	clear:both;
+}
+ #smallul{
+   display: none;
+   position: relative;
+   width:100%;
+   height:48px;
+   
+}
+#aa:checked~nav{
+   height:100%; 
+   background: black;
+}
+#smallul #firstul{
+	 width:100%;
+      height:48px;
+      padding:0 20px;
+}
+.listli{
+	width:48px;
+	height:48px;
+	position: absolute;
+	top:0;
+	left:0;
+	/* width:20px;
+	height:40px;
+	background:url(../img/apple_logo.svg);  */
+}
+.logoli{
+	width:20px;
+	height:40px;
+	background:url(../img/apple_logo.svg); 
+	position: absolute;
+	left:50%;
+	margin-left: -10px;
+}
+.gouwuli{
+	width:20px;
+	height:40px;
+	background:url(../img/gouwu_large.svg); 
+	position: absolute;
+	right:10px;
+	top:0;
+} 
+#aa:checked~nav #firstul .gouwuli{
+	visibility: hidden;
+}
+#smallul li{
+	height:48px;
+	display: block;
+}
+
+#aa{
+	display: none;
+}
+#bb{
+	position: relative;
+	width:48px;
+	height:48px;
+	display: block;
+
+}
+.hengxian{
+	width:17px;
+	height:1px;
+	background: #fff;
+	position: absolute;
+	top:23px;
+	left:16px;	
+	transform:translateY(-3px);    
+}
+.hengxian00{
+	width:17px;
+	height:1px;
+	margin-bottom: 13px;
+	background: #fff;
+	position: absolute;
+	top:25px;
+	left:16px;
+	transform:translateY(3px);    
+}
+#span{
+	position: absolute;
+	top:0;
+	left:0;
+	width:48px;
+	height:48px;
+	display: block;
+	transform:rotate(0deg);
+}
+#aa:checked~nav #bb #span{
+	transform:rotate(90deg);
+}
+#span00{
+	position: absolute;
+	top:0;
+	left:0;
+	width:48px;
+	height:48px;
+	display: block;
+	transform:rotate(-0px);
+}
+#aa:checked~nav #bb #span00{
+	transform:rotate(-90px);
+}
+#bb span{
+	transition:transform .75s ease .2s;
+	-webkit-transition:transform .25s ease .2s;
+}
+#aa:checked~nav #bb #span .hengxian{
+	transform:rotateZ(45deg) translateY(0px);
+	-webkit-transform:rotateZ(45deg) translateY(0px);
+	/* top:28px; */
+}
+#aa:checked~nav #bb #span .hengxian00{
+	transform:rotateZ(-45deg) translateY(0px);
+	-webkit-transform:rotateZ(-45deg) translateY(0px);
+} 
+/*旋转交叉线*/
+
+nav #smallul .sm-ul-list{
+	 position:relative; 
+	top:96px;
+	right:0;
+	left:0;
+	bottom: 0;
+	padding:0 48px;
+	z-index: 104;
+	width:100%;
+	height:auto;
+	box-sizing:border-box;
+/* 	background: black; */
+	 visibility: hidden; 
+	 position: absolute; 
+	 transition:visibility .2s .2s ease;
+}
+
+ #aa:checked~nav #smallul .sm-ul-list{
+ 	position: relative;
+	top:48px;
+	right:0;
+	left:0;
+	bottom: 0;
+	padding:0 48px;
+	z-index: 104;
+	width:100%;
+	height:auto;
+	box-sizing:border-box;
+/* 	background: black; */
+	visibility: visible;
+}  
+nav #smallul .sm-ul-item{
+	width:100%;
+	height:40px;
+	box-sizing:content-box;
+	color:#fff;
+}
+#aa:checked~nav #smallul .sm-ul-item{
+	
+	animation-name:leftyi;
+	animation-duration:0.6s;
+	animation-fill-mode:both; 
+}
+nav #smallul .sm-ul-item:nth-child(2){
+	animation-delay:0.1s;
+}
+nav #smallul .sm-ul-item:nth-child(3){
+	animation-delay:0.2s;
+}
+nav #smallul .sm-ul-item:nth-child(4){
+	animation-delay:0.3s;
+}
+nav #smallul .sm-ul-item:nth-child(5){
+	animation-delay:0.4s;
+}
+nav #smallul .sm-ul-item:nth-child(6){
+	animation-delay:0.5s;
+}
+nav #smallul .sm-ul-item:nth-child(7){
+	animation-delay:0.6s;
+}
+nav #smallul .sm-ul-item:nth-child(8){
+	animation-delay:0.7s;
+}
+nav #smallul .sm-ul-item:nth-child(9){
+	animation-delay:0.8s;
+}
+@keyframes leftyi{
+	0%{
+		opacity:0;
+		transform:translateX(-20px);
+	}
+	100%{
+		opacity:1;
+		transform:translateX(0);
+	}
+}
+ .logo00{
+	width:20px;
+	height:40px;	
+	background:url(../img/apple_logo.svg) no-repeat;
+	background-size:21px 48px;  
+}
+.mac00{
+	width:1.875em;
+	height:40px;
+	background:url(../img/mac_large.svg) no-repeat; 
+	background-size:37px 48px;
+	border-bottom: 1px solid silver;
+}
+.ipad00{
+	width:30px;
+	height:40px;
+	background:url(../img/ipad_large.svg) no-repeat; 
+	background-size:35px 48px;
+	border-bottom: 1px solid silver;
+}
+.iphone00{
+	width:47px;
+	height:40px;
+	background:url(../img/iphone_large.svg) no-repeat; 
+	background-size:59px 48px;
+	border-bottom: 1px solid silver;
+}
+.watch00{
+	width:45px;
+	height:40px;
+	background:url(../img/watch_large.svg) no-repeat;
+	background-size:52px 48px;
+	border-bottom: 1px solid silver;	 
+}
+.tv00{
+	width:20px;
+	height:40px;
+	background:url(../img/tv_large.svg) no-repeat; 
+	background-size:23px 48px;
+	border-bottom: 1px solid silver;
+}
+.music00{
+	width:45px;
+	height:40px;
+	background:url(../img/music_large.svg) no-repeat; 
+	background-size:48px 48px;
+	border-bottom: 1px solid silver;	
+}
+.support00{
+	width:55px;
+	height:40px;
+	background:url(../img/support_large.svg) no-repeat;
+	background-size:70px 49px; 
+	color:#fff;
+	border-bottom: 1px solid silver;	
+}
+.search00{
+	width:20px;
+	height:40px;
+	background:url(../img/search_large.svg) no-repeat; 
+	background-size:22px 48px;
+	margin-bottom: 48px;
+	border-bottom: 1px solid silver;	
+	padding-left:20px;
+	line-height: 45px;
+}
+
+.search00 span{
+	margin-left: 20px;
+	display: block;
+	color:#fff;
+	width:100%;
+	height:100%;
+	font-size: 18px;
+}
+
+/*top下拉*/
+
+
+
+
+
+
+
+nav a{
+	display: block;
+	width:100%;
+	height:100%;
+	color:#fff;
+	 position:relative;
+}
+
+nav li{
+	display: inline-block;
+	height:40px;
+}
+nav li:hover{
+	opacity: 0.8;
+}
+nav ul:after{
+	content: "";
+	display: inline-block;
+	width:100%;
+	height:0;
+	font-size: 0;
+	line-height: 0;
+}
+.bignav{
+	/* width:800px; */
+	height:40px;
+	min-width: 786px;
+	max-width: 1000px;
+	line-height: 40px;
+    margin:0 auto;
+   /*  border:1px solid red; */
+    padding:0 20px;
+}
+nav li span{
+     width:0;
+     height:0;
+     position:absolute;
+     top:0;
+     left:0;
+     overflow: hidden;
+}
+ .logo{
+	width:20px;
+	height:40px;	
+	background:url(../img/apple_logo.svg) no-repeat; 
+}
+.mac{
+	width:1.875em;
+	height:40px;
+	background:url(../img/mac_large.svg) no-repeat; 
+}
+.ipad{
+	width:30px;
+	height:40px;
+	background:url(../img/ipad_large.svg) no-repeat; 
+}
+.iphone{
+	width:47px;
+	height:40px;
+	background:url(../img/iphone_large.svg) no-repeat; 
+}
+.watch{
+	width:45px;
+	height:40px;
+	background:url(../img/watch_large.svg) no-repeat; 
+}
+.tv{
+	width:20px;
+	height:40px;
+	background:url(../img/tv_large.svg) no-repeat; 
+}
+.music{
+	width:45px;
+	height:40px;
+	background:url(../img/music_large.svg) no-repeat; 
+}
+.support{
+	width:55px;
+	height:40px;
+	background:url(../img/support_large.svg) no-repeat; 
+}
+.search{
+	width:20px;
+	height:40px;
+	background:url(../img/search_large.svg) no-repeat; 
+}
+.gouwu{
+	width:20px;
+	height:40px;
+	background:url(../img/gouwu_large.svg); 
+}
+
+.searchview{
+	box-sizing:content-box;
+	display:none;	
+}
+.searchview-content{
+	position: absolute;
+	top:0;
+	left:24.66667%;
+	width:60.66667%;
+	height:100vh;
+	z-index: 3;
+	box-sizing:content-box;
+}
+.search-formbox{
+	height:44px;
+	line-height: 44px;
+}
+.search-form{
+	position:relative;
+	padding-left:40px;
+}
+.search-form input[type="text"]{
+	font-size: 16px;
+	background: none;
+	border:none;
+	color:#ddd;
+	line-height: 1.375em;
+	height:1.375em;
+	padding:1px 0;
+	font-weight:normal;
+	box-sizing:border-box;
+	outline:none;
+}
+.search-form button[type="submit"]{
+	position: absolute;
+	top:0;
+	left:0;
+	width:40px;
+	height:44px;
+	background-size:20px 44px;
+	background: url(../img/search_large.svg) no-repeat center center; 
+	border:none;
+	cursor:pointer;
+	outline: none;
+}
+
+.search-close{
+	opacity:1;
+	position:absolute;
+	top:0;
+	right:198px;
+	width:38px;
+	height:44px;
+	z-index: 3;color:#fff;
+	cursor:pointer;
+	background: none;
+	border:none;
+	outline:none;
+}
+.search-close-wrapper{
+	display:block;
+	width:100%;
+	height:100%;
+	text-align: center;
+    padding:2px 6px 3px;
+    box-sizing:border-box;
+}
+.search-close-left{
+	display: block;
+	width:1px;
+	height:18px;
+    background: #fff;
+   transform:rotateZ(45deg);
+   position:absolute;
+   top:11px;
+   left:12px;	
+}
+.search-close-right{
+	display: block;
+	width:1px ;
+	height:18px;
+	background: #fff;
+    transform:rotateZ(-45deg);
+    position: absolute;
+    top:11px;
+    left:12px;
+}
+/*顶部完*/
+.familybrowser{
+	position:relative;
+	top:48px;
+	width:100%;
+    background:rgba(242,242,242,0.6);
+    z-index: 100;
+    overflow: hidden;
+    text-align:center;
+    height:158px;
+}
+
+.familywrapper{
+	height:110px;
+	max-width:100%;
+}
+.family-browse-items{
+	margin:0 34px;
+	padding-bottom:49px;
+}
+.family-browse-items:before{
+	content:"";
+	display:table;
+}
+.family-browse-items:after{
+	content:"";
+	display: table;
+	clear:both;
+}
+.family-browse-item{
+	padding:0 18px;
+    display: inline-block;
+}
+.family-browse-item a{
+	position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-top: 13px;
+    margin-bottom: 26px;
+    vertical-align: top;
+    color: #333;
+}
+.family-word{
+	font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: normal;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 8px;
+    white-space: normal;
+    color: #333;
+    z-index: 2;
+}
+.family-icon{
+   margin-left:auto;
+   margin-right:auto;
+   display: block;
+   background-position:center bottom; 
+
+}
+.macbook .family-icon{
+	background-repeat:no-repeat; 
+    background-size: 46px 54px;
+    height: 54px;
+    width: 46px;
+    background: url(../img/mac/macbook_large.svg);
+}
+.macbook-air .family-icon{
+    background-repeat: no-repeat;
+    background-image: url(../img/mac/macbookair_large.svg);
+    background-size: 52px 54px;
+    height: 54px;
+    width: 52px;
+}
+.macbook-pro .family-icon{
+    background-repeat: no-repeat;
+    background-image: url(../img/mac/macbookpro_large.svg);
+    background-size: 58px 54px;
+    height: 54px;
+    width: 58px;
+}
+.imac .family-icon{
+    background-image: url(../img/mac/imac_large.svg);
+    background-repeat: no-repeat;
+    background-size: 48px 54px;
+    height: 54px;
+    width: 48px;
+}
+.mac-pro .family-icon{
+	background-repeat: no-repeat;
+    background-image: url(../img/mac/macpro_large.svg);
+    background-size: 21px 54px;
+    height: 54px;
+    width: 21px;
+}
+.mac-mini .family-icon{
+	background-repeat: no-repeat;
+    background-image: url(../img/mac/macmini_large.svg);
+    background-size: 28px 54px;
+    height: 54px;
+    width: 28px;
+}
+.accessories .family-icon{
+	background-repeat: no-repeat;
+    background-image: url(../img/mac/mac_acc_large.svg);
+    background-size: 28px 54px;
+    height: 54px;
+    width: 28px;
+}
+.capitan .family-icon{
+	background-repeat: no-repeat;
+    background-image: url(../img/mac/mac_osx_large.svg);
+    background-size: 30px 54px;
+    height: 54px;
+    width: 30px;
+}
+.compare .family-icon{
+	background-repeat: no-repeat;
+    background-image: url(../img/mac/mac_comp_large.svg);
+    background-size: 70px 54px;
+    height: 54px;
+    width: 70px;
+}
+/*mac导航*/
+.pagetitle{
+	position: absolute;
+    top: 0;
+    left: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+.fg-product{
+	padding-bottom:140px;
+}
+.product-imac{
+	position:relative;
+	z-index: 1;
+	padding-top:490px;
+	padding-bottom:502px;
+}
+.fp-section-content{
+	max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+.fp-section-content:before{
+   content:"";
+   display:table;
+}
+.fp-section-content:after{
+	clear:both;
+   content:"";
+   display:table;
+}
+.large-5.fp-product-content{
+	position: relative;
+    z-index: 10;
+    top: -340px;
+    left: 30px;
+    text-align:center;
+}
+.fp-product-content{
+	text-align: center;
+}
+.large-5{
+	width:41.6667%;
+}
+.column{
+	min-height:2px;
+	margin:0;
+	padding:0;
+	float:left;
+}
+.fp-product-headline{
+	font-size:72px;
+	line-height:1.0556;
+	font-weight: 200;
+    letter-spacing: -0.024em;
+    margin-bottom: 0;
+   /*  margin:0 0 0.45em 0; */
+    display: block;
+}
+.fp-product-subheadline{
+	font-size: 42px;
+    line-height: 1.1429;
+    font-weight: 200;
+    letter-spacing: -0.01em;
+}
+.fp-moreblock{
+	 font-size: 24px;
+    font-weight: 200;
+    letter-spacing: normal;
+    line-height: 2.5em;
+}
+.fp-moreblock .more{
+	margin-left:10px;
+	margin-right:10px;
+	color:#08c;
+}
+.fp-moreblock .more:after{
+	color:#08c;
+	content: ">";
+
+}
+
+.large-centered{
+	margin-left:auto;
+	margin-right:auto;
+	float:none;
+}
+.large-12{
+	width:100%;
+}
+.image-imac{
+	width:987px;
+	height:799px;
+	background: url(../img/mac/hero_large.jpg) no-repeat;
+	background-size:987px 799px;
+	position:absolute;
+	top:-266px;
+}
+.fp-product-accessories{
+	margin-bottom:0;
+}
+.large-8{
+	width:66.6667%;
+}
+.image-accessories{
+    width:1661px;
+    height:314px;
+    background:url(../img/mac/apple_accessories_large.jpg) no-repeat;
+    background-size:1661px 314px;
+     z-index: -1;
+    position: absolute;
+    left: -527px;
+}
+.fp-product-macbook{
+	padding-top: 515px;
+    padding-bottom: 375px;
+    position: relative;
+    z-index: 2;
+}
+.fp-product-column{
+	position:relative;
+	z-index: 15;
+	top:25px;
+}
+.large-offset-7{
+	margin-left: 58.3333%;
+}
+.large-4{
+	width:33.3333%;
+}
+.image-macbook{
+	width:674px;
+	height:844px;
+	background: url(../img/mac/macbook_large.jpg) no-repeat;
+	background-size:674px 844px;
+	position:absolute;
+	left:-62px;
+	top:-315px;
+}
+.fp-product-macbook-pro{
+	position: relative;
+	z-index: 1;
+	padding-top:255px;
+	padding-bottom:245px;
+}
+.row{
+	position: relative;
+	z-index: 1;
+}
+.large-7{
+	width: 58.3333%;
+}
+.image-macbookpro{
+	width:979px;
+	height:523px;
+	background-size:979px 523px;
+	background: url(../img/mac/mbpr_large.jpg) no-repeat; 
+	position: absolute;
+	top:-123px;
+	left:188px;
+}
+.fp-product-macbook-air{
+	position: relative;
+	z-index: 1;
+	padding-top:263px;
+	padding-bottom:280px;
+
+}
+.large-8 {
+    width: 66.6667%;
+}
+.large-offset-4 {
+    margin-left: 33.3333%;
+}
+.image-macbookair{
+	width:927px;
+	height:474px;
+	background-size: 927px 474px;
+	background: url(../img/mac/mba_large.png) no-repeat;
+	position: absolute;
+	top:-115px;
+	left:-183px;
+}
+.fp-compare{
+	margin-top:50px;
+	margin-bottom:0;
+	text-align: center;
+}
+.fp-compare-content{
+	padding-top:92px;
+	padding-bottom:120px;
+}
+.fp-compare-image{
+	width:923px;
+	height:435px;
+	background-size: 923px 435px;
+	background: url(../img/mac/compare_large.jpg) no-repeat;
+	margin-left: auto;
+	margin-right:auto;
+	margin-top:40px;
+}
+.small-only{
+	display: none;
+}
+.desktop-only{
+	display: block;
+}
+.fp-secondary-headline{
+	font-size: 52px;
+    line-height: 1.0865;
+    font-weight: 200;
+    letter-spacing: -0.014em;
+    text-align: center;
+}
+
+.fp-compare-content .more{
+	margin-left:10px;
+	margin-right:10px;
+	color:#08c;
+}
+.fp-compare-content .more:after{
+	color:#08c;
+	content: " >";
+
+}
+.fp-ssn{
+	color: #333;
+    opacity: 1;
+    overflow: hidden;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    background-size: 1px 541px;
+    background-image: url(../img/mac/startsomethingnew_banner_gradient_large.png) no-repeat;
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    height: 572px;
+    margin-bottom: 24px;
+}
+.fp-billboard-center,.fp-billboard-headline,.fp-billboard-copy{
+	margin-left:auto;
+	margin-right:auto;
+}
+.fp-billboard-center{
+	text-align: center;
+}
+.fp-billboard-headline{
+	font-size:52px;
+	line-height: 1.0865;
+	font-weight: 200;
+	letter-spacing:-0.014em;
+}
+.fp-billboard-copy{
+       font-size: 18px;
+       line-height: 1.45;
+       font-weight: 400;
+       letter-spacing: normal;
+       margin-bottom: 0.2778em;
+}
+.more{
+	margin-left:10px;
+	margin-right:10px;
+	color:#08c;
+}
+.more:after{
+	color:#08c;
+	content: " >";
+}
+.ssn-banner-hero{
+	width:1571px;
+	height:354px;
+	background-size: 1571px 354px;
+	background: url(../img/mac/startsomethingnew_banner_mac_large.png) no-repeat;
+     position: absolute;
+    left:50%;
+    bottom:0;
+    margin-left:-745px;
+}
+
+.fp-shopstrip{
+	padding-top:99px;
+}
+.row:before{
+	content:"";
+	display:table;
+}
+.row:after{
+	content:"";
+	display: table;
+	clear:both;
+}
+.fp-shopstrip-content{
+	margin-bottom:80px;
+	text-align: center;
+}
+.large-6{
+	width:50%;
+}
+.fp-shopstrip-icon-headline{
+	display: block;
+}
+.fp-shopstrip-icon{
+	display: block;
+	margin-left: auto;
+	margin-right:auto;
+}
+.icon-pickup{
+    background-size: 37px 41px;
+    height: 41px;
+    width: 37px;
+    background: url(../img/mac/icon_pickup_large.png) no-repeat;
+}
+.fp-shopstrip-headline{
+	font-size: 28px;
+    line-height: 1.1429;
+    font-weight: 200;
+    letter-spacing: normal;
+    margin-bottom: 0.25em;
+    margin-top: 0.6429em;
+}
+.fp-shopstrip-copy{
+	font-size: 18px;
+    line-height: 1.4444;
+    font-weight: 400;
+    letter-spacing: normal;
+    margin: 0;
+}
+.fp-shopstrip-more{
+	font-size: 18px;
+    line-height: 1.4444;
+    font-weight: 400;
+    letter-spacing: normal;
+    margin: 0;
+}
+.icon-ship{
+    background-size: 36px 40px;
+    height: 40px;
+    width: 36px;
+    background: url(../img/mac/icon_shipping_large.png) no-repeat;
+}
+.fp-accessories{
+	margin-bottom: 0;
+}
+.fp-billboard{
+	padding-top:0;
+	padding-bottom:0;
+	position:relative;
+	z-index: 1;
+}
+.image-accessories-mac{
+	background: url(../img/mac/accessories_large.jpg) no-repeat;
+}
+.fp-billboard-image {
+    position: relative;
+    background-size: cover !important;
+    background-position: center top;
+    min-height: 600px;
+}
+.fp-billboard-image::before {
+    content: "";
+    display: block;
+    padding-bottom: 41.6667%;
+}
+.fp-billboard-wrapper {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.fp-billboard-content {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+     transform: translateY(-50%); 
+}
+.fp-section-content .moreshop{
+	color:#333;
+}
+.fp-section-content .moreshop:after{
+	content:" >";
+	color:#333;
+}
+.fp-osx-and-icloud {
+    background: #fafafa;
+    padding-top: 65px;
+    padding-bottom: 110px;
+    text-align: left;
+}
+.image-yosemite-icloud{
+	background-repeat: no-repeat;
+    background-size: 765px 315px;
+    height: 315px;
+    width: 765px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../img/mac/partnership_large.png);
+    margin-top: 50px;
+}
+.product-features{
+	margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 95px;
+}
+.osx{
+	width:47%;
+}
+.fp-icon-heading{
+	margin-bottom: 15px;
+}
+.app-icon{
+	margin-right: 16px;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon-osx{
+	background-repeat: no-repeat;
+    background-size: 52px 52px;
+    height: 52px;
+    width: 52px;
+    background-image: url(../img/mac/hero_icon_large.png);
+}
+.column .fp-icon-headline{
+    font-size: 42px;
+    line-height: 1.1429;
+    font-weight: 200;
+    letter-spacing: -0.01em;
+    margin: 0;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+.fp-osx-and-icloud .product-features-content{
+	margin-left: 76px;
+}
+.copy{
+	margin-bottom:8px;
+	margin:0 0 1em 0;
+}
+.osx .more{
+	margin-left: 0;
+}
+.fp-osx-and-icloud .icloud{
+	width:45%;
+	left:7%;
+}
+.icon-icloud{
+	background-repeat: no-repeat;
+    background-size: 48px 48px;
+    height: 48px;
+    width: 48px;
+    background-image: url(../img/mac/icloud_icon_large.png);
+}
+.fp-amazing-apps .gallery-wrapper {
+    margin-top: 100px;
+    margin-bottom: 110px;
+}
+.fp-secondary-headline {
+    font-size: 52px;
+    line-height: 1.0865;
+    font-weight: 200;
+    letter-spacing: -0.014em;
+    margin-bottom: 0.3333em;
+    text-align: center;
+}
+.center-paragraph{
+	width:735px;
+	min-height: 52px;
+    text-align: center;
+}
+.large-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+.center-paragraph a{
+	color:#08c;
+}
+.ac-browser{
+	position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.ac-browser-wrapper{
+	margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.ac-browser-items{
+	margin: 0 34px;
+    padding-bottom: 50px;
+    list-style: none;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+.ac-browser-items:before{
+	content: "";
+	display: table;
+}
+.ac-browser-items:after{
+	content: "";
+	display: table;
+	clear:both;
+}
+.ac-browser-item{
+	display: inline-block;
+	padding:0;
+}
+.fp-amazing-apps .apps .apps-item.current {
+    border-bottom-color: #333;
+}
+.fp-amazing-apps .apps .apps-item {
+    font-size: 14px;
+    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 5px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: #333;
+    min-width: 106px;
+}
+.fp-amazing-apps .apps .apps-item figure {
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 77px;
+}
+.fp-amazing-apps .apps .apps-item .image-photos-nav{
+	width:77px;
+	height:77px;
+	background-size:77px 77px;
+	background-repeat: no-repeat;
+	background: url(../img/mac/nav_icon_photos_large.png);
+}
+.fp-amazing-apps .apps .apps-item .image-imovie-nav{
+	width:77px;
+	height:77px;
+	background-size:77px 77px;
+	background-repeat: no-repeat;
+	background: url(../img/mac/nav_icon_imovie_large.png);
+}
+.fp-amazing-apps .apps .apps-item .image-garageband-nav{
+	width:77px;
+	height:77px;
+	background-size:77px 77px;
+	background-repeat: no-repeat;
+	background: url(../img/mac/nav_icon_garageband_large.png);
+}
+.fp-amazing-apps .apps .apps-item .image-pages-nav{
+	width:77px;
+	height:77px;
+	background-size:77px 77px;
+	background-repeat: no-repeat;
+	background: url(../img/mac/nav_icon_pages_large.png);
+}
+.fp-amazing-apps .apps .apps-item .image-numbers-nav{
+	width:77px;
+	height:77px;
+	background-size:77px 77px;
+	background-repeat: no-repeat;
+	background: url(../img/mac/nav_icon_numbers_large.png);
+}
+.fp-amazing-apps .apps .apps-item .image-keynote-nav{
+	width:77px;
+	height:77px;
+	background-size:77px 77px;
+	background-repeat: no-repeat;
+	background: url(../img/mac/nav_icon_keynote_large.png);
+}
+.fp-amazing-apps .apps .apps-item .image-safari-nav{
+	width:77px;
+	height:77px;
+	background-size:77px 77px;
+	background-repeat: no-repeat;
+	background: url(../img/mac/nav_icon_safari_large.png);
+}
+.ac-gallery-content .ac-gallery{
+	position: relative;
+	text-align: left;
+}
+
+ .fp-amazing-apps .ac-gallery-fade .ac-gallery-content .visivle.column{
+    margin-left: -78px; 
+} 
+.fp-amazing-apps .image-bia-photos {
+    background-repeat: no-repeat;
+    background-size: 670px 540px; 
+    height: 540px;
+    width: 670px;
+    background-image:url(../img/mac/bia_photos_large.jpg); 
+    z-index:3; 
+}
+.fp-amazing-apps .description {
+    padding-top: 50px;
+}
+.large-4 {
+    width: 33.3333%;
+}
+.fp-amazing-apps .description figure {
+    margin-bottom: 15px;
+    min-height: 97px;
+}
+.fp-amazing-apps .image-section-photos-icon {
+    background-repeat: no-repeat;
+    background-size: 74px 74px;
+    height: 74px;
+    width: 74px;
+    background-image: url(../img/mac/bia_photos_header_large.png);
+}
+.fp-amazing-apps .fp-gallery-icon-headline {
+    margin-top: 0;
+    font-weight: 200;
+    font-size: 32px;
+}
+
+
+
+
+
+.fp-billboard {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.fp-billboard-left {
+    text-align: left;
+}
+.fp-billboard, .fp-billboard a {
+    color: #fff;
+}
+.fp-billboard {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 7px;
+}
+.fp-education .image-macforeducation {
+    background-repeat: no-repeat;
+    background-size: 1440px 597px;
+    background-image: url(../img/mac/education_large.jpg);
+}
+.fp-billboard-image {
+    position: relative;
+    background-size: cover !important;
+    background-position: center top;
+    min-height: 600px;
+}
+.fp-billboard-wrapper {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.fp-billboard-left .fp-billboard-content {
+    margin-left: 80px;
+}
+.fp-moreblock {
+    font-size: 24px;
+    line-height: 1.3542;
+    font-weight: 200;
+    letter-spacing: normal;
+    line-height: 2.5em;
+}
+.fp-billboard-moreblock {
+    display: block;
+}
+.fp-billboard-copy, .fp-billboard-moreblock .more {
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 400;
+    letter-spacing: normal;
+    margin-bottom: 0.2778em;
+    color:#fff;
+}
+.fp-billboard-moreblock .more:hover{
+
+	color:#fff;
+	text-decoration:underline;
+}
+.fp-moreblock-left .more {
+    float: left;
+    clear: both;
+    margin-right: 0;
+    margin-left: 0;
+
+}
+.fp-billboard-copy, .fp-billboard-moreblock .more:after{
+	content: " >";
+	display: inline-block;
+   color:#fff;
+}
+.fp-billboard-right {
+    text-align: left;
+}
+.fp-business .image-macforbusiness {
+    background-repeat: no-repeat;
+    background-size: 1440px 597px;
+    background-image: url(../img/mac/business_large.jpg);
+}
+.fp-billboard-right .fp-billboard-content {
+    margin-left: 510px;
+}
+
+.fp-workshops {
+    margin-bottom: 0px;
+}
+.fp-billboard-center {
+    text-align: center;
+}
+.fp-workshops .image-workshops-retail {
+    background-repeat: no-repeat;
+    background-size: 1440px 597px;
+    background-image: url(../img/mac/workshops_large.jpg);
+}
+.fp-billboard-center .fp-billboard-content {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fp-workshops .fp-billboard-headline {
+    margin-left: auto;
+    margin-right: auto;
+    width: 62%;
+}
+.fp-workshops .fp-billboard-copy {
+    width: 42%;
+}
+/*主内容*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footerbox{
+	line-height: 1.66667em;
+	font-weight: 400;
+	font-size:12px;
+	background: #f2f2f2;
+	color:#666;
+	min-width:320px;
+	/* overflow: hidden; */
+	z-index: 1;
+	position: relative;
+   letter-spacing: normal;
+   font-size: 12px;
+   font-family: "微软雅黑";
+}
+.footer{
+	max-width:980px;
+	margin:0 auto;
+	padding:0 22px;
+
+}
+.footer-ac{
+    position: absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:0;
+    overflow: hidden;
+}
+.fo-columns{
+	padding-top: 20px;
+	width:100%;
+}
+.footer .fo-columns:before{
+   content:"";
+   display: table;
+}
+.footer .fo-columns:after{
+	content: "";
+	display: table;
+	clear:both;
+}
+.fo-columns .directory{
+	width:20%;
+	float:left;
+}
+.directory input{
+	display: none;
+}
+.directory .column{
+	width:100%;
+    height:100%;
+    position: relative;
+}
+.column .list-item{
+	font-size: 9px;
+	display: block;
+	letter-spacing:normal;
+}
+.column .list-item a{
+	display: block;
+
+}
+.column .list-item a:hover{
+	color:#333;
+	text-decoration: underline;
+}
+.column h3{
+/* 	font-weight: bold; */
+	/* font-family: "微软雅黑"; */
+	font-size: 12px;
+	color:#000;
+	line-height: 40px;
+}
+.list-item .list-content{
+	color:#999;
+}
+#yin{
+
+	width:0px;
+	overflow: hidden;
+}
+
+
+.dibubox{
+	font-size: 1em;
+/* 	border-top: 1px solid #e3e3e3; */
+    color: #999;
+    padding: 20px 0 24px; 
+    max-height:9999px;
+}
+.dibu-11{
+	border-bottom: 1px solid #e3e3e3;
+}
+.dibu-11 a{
+	color:#08c;
+}
+
+.dibu-guoqi{
+	float:right;
+	white-space: nowrap
+}
+.dibu-guoqi a{
+	display: inline;
+}
+.dibu-guoqi .dibu-gq-tu{
+	background: url(../img/oisGCDAAJKZGS03EBemAAAAAElFTkSuQmCC.png) no-repeat;
+	background-size:16px 16px ; 
+}
+.dibu-guoqi a span{
+	padding-left:16px;
+}
+.dibu-22 p{
+	float:left;
+	margin-right:15px;
+}
+.dibu-22 p a{
+    border-right: 1px solid #d6d6d6;
+    margin-right: 10px;
+    padding-right: 12px;
+    white-space: nowrap; 
+	color:#666;
+}
+#last{
+	border:none;
+}
+/*footer结束*/
+
+
+
+
+
+
+
+
+
+@media(max-width:730px){
+	
+    
+}
+@media(max-width:650px){
+   .footer .fo-columns .directory{
+	width:100%;
+	/* float:left; */
+     }
+     
+
+     /*轮播图片*/
+    .dibu-guoqi{
+     float:none; 
+	white-space: nowrap;
+	position: relative;
+	left:-1px;
+     }
+	.footerbox .footer{
+		margin:0 auto;
+		padding:0 16px;
+
+	}
+	.column .list-item{
+     visibility: hidden;
+		position: absolute;
+     }
+	.column{
+		border-bottom: 1px solid #ddd;
+		position: relative;
+	}
+	h3:after{
+		content: "+";
+		color:black;
+		display:block;
+		/* float:right; */
+		position: absolute;
+		top:0;
+		right:1%;
+	}
+	
+	.bignav{
+		display: none;
+	}
+	#smallul{
+		display:block;
+	}
+	#check:checked~.column label .column-title:after{
+		transform:rotateZ(45deg);
+	}
+	#check:checked~.column .list-item{
+		visibility: visible;
+		position: relative;
+		line-height: 30px;
+	}
+	#check11:checked~.column label .column-title:after{
+		transform:rotateZ(45deg);
+	}
+	#check11:checked~.column .list-item{
+		visibility: visible;
+		position: relative;
+	}
+	#check22:checked~.column label #tebie:after{
+		transform:rotateZ(45deg);
+	}
+	#check22:checked~.column .tebieul .list-item{
+		visibility: visible;
+		position: relative;
+	}
+	#check33:checked~.column label .column-title:after{
+		transform:rotateZ(45deg);
+	}
+	#check33:checked~.column .list-item{
+		visibility: visible;
+		position: relative;
+	}
+    #check44:checked~.column label #tebie:after{
+		transform:rotateZ(45deg);
+	}
+	#check44:checked~.column .tebieul .list-item{
+		visibility: visible;
+		position: relative;
+	}
+	#check55:checked~.column label .column-title:after{
+		transform:rotateZ(45deg);
+	}
+	#check55:checked~.column .list-item{
+		visibility: visible;
+		position: relative;
+	}
+	#check66:checked~.column label .column-title:after{
+		transform:rotateZ(45deg);
+	}
+	#check66:checked~.column .list-item{
+		visibility: visible;
+		position: relative;
+	}
+   
+}
